@@ -1,0 +1,34 @@
+{
+	"index.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"list.html",
+			"js/mui.js",
+			"css/mui.css",
+			"4.jpg",
+			"1.jpg",
+			"2.jpg",
+			"3.jpg"
+		],
+		"refer": [
+			"list.html"
+		]
+	},
+	"list.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.js",
+			"css/mui.css"
+		],
+		"refer": [
+			"detail.html"
+		]
+	},
+	"detail.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.js",
+			"css/mui.css"
+		]
+	}
+}
