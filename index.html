@@ -8,52 +8,48 @@
 		<link rel="stylesheet" type="text/css" href="css/mui.css" />
 	</head>
 	<style>
-		.mui-slider-item img {
+		.mui-slider img {
 			width: 100%;
-			height: 230px;
+			height: 280px;
 		}
 	</style>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">头部</h1>
+			<h1 class="mui-title">标题</h1>
 		</header>
-
-		<div class="mui-content">
-			<div class="mui-slider">
-				<div class="mui-slider-group mui-slider-loop">
-					<!--支持循环，需要重复图片节点-->
-					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#"><img src="4.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img src="1.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img src="2.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img src="3.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img src="4.jpg" /></a>
-					</div>
-					<!--支持循环，需要重复图片节点-->
-					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#"><img src="1.jpg" /></a>
-					</div>
+		<div class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+				<!--支持循环，需要重复图片节点-->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#"><img src="4.jpg" /></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="1.jpg" /></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="2.jpg" /></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="3.jpg" /></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="4.jpg" /></a>
+				</div>
+				<!--支持循环，需要重复图片节点-->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#"><img src="1.jpg" /></a>
 				</div>
 			</div>
 		</div>
-
 		<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</a>
 			<a class="mui-tab-item">
-				<span class="mui-icon mui-icon mui-icon-bars" id="kind"></span>
+				<span class="mui-icon mui-icon mui-icon-bars"></span>
 				<span class="mui-tab-label">分类</span>
 			</a>
 			<a class="mui-tab-item">
@@ -72,11 +68,29 @@
 					url: 'list.html',
 					id: 'list.html',
 					styles: {
-						top: '280px', //mui标题栏默认高度为45px；
+						top: '320px', //mui标题栏默认高度为45px；
 						bottom: '50px' //默认为0px，可不定义；
 					},
 				}]
 			})
+            
+            	mui.plusReady(function() {
+
+				mui('.mui-bar').on('tap', '#kind', function() {
+					//					alert('111')
+					mui.openWindow({
+						url: 'kind.html',
+						id: 'kind.html',
+						styles: {
+							top: '0', //新页面顶部位置
+							bottom: 0, //新页面底部位置
+						}
+
+					})
+				})
+
+			})
+			
 		</script>
 	</body>
 
